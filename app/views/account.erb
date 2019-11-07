@@ -7,8 +7,8 @@
   </head>
   <body id="page-top">
     <% if Helpers.is_logged_in?(session) %>
-      <h1><%= @user.username %></h1>
-      <h2><%= @user.balance %></h2>
+      <h1><%= Helpers.current_user(session).username %></h1>
+      <h2><%= Helpers.current_user(session).balance %></h2>
     <% else %>
       <p>Please visit the home page to <a href="/index">log in</a>.</p>
     <% end %>
