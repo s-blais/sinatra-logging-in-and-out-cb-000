@@ -1,4 +1,4 @@
-class Helpers
+class Helpers # does this need to inherit from Sinatra::Base? Seems to work without it...
 
   def self.current_user(session)
     User.find(session[:user_id])
